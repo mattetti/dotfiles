@@ -1,0 +1,58 @@
+[user]
+  name = Matt Aimonetti
+	email = 113+mattetti@users.noreply.github.com
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  ci = commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %an %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+[apply]
+  whitespace = nowarn
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[pack]
+  threads = 2
+[merge]
+  summary = true
+  tool = opendiff
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[push]
+  default = current
+[mergetool]
+  keepBackup = false
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+  change = codereview change
+  gofmt = codereview gofmt
+  mail =      codereview mail
+  pending = codereview pending
+  submit = codereview submit
+  sync = codereview sync
