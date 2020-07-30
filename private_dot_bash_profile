@@ -1,0 +1,12 @@
+
+export GOPATH=/home/$USER/go
+export WINHOME=$(wslpath "$(wslvar USERPROFILE)")
+
+
+export PATH=$PATH:/home/$USER/.go/bin
+export PATH=$PATH:/home/$USER/go/bin
+export PATH=$PATH:"$HOME/bin"
+
+if [[ -f ~/.bashrc ]] ; then
+	. ~/.bashrc
+fi
