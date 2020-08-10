@@ -3,5 +3,5 @@ alias open="explorer.exe"
 {{ else if eq .chezmoi.os "darwin" -}}
 # macOS .bashrc contents
 {{ else if eq .chezmoi.os "linux" -}}
-# Linux .bashrc contents
+alias open="explorer.exe" # wsl
 {{ end -}}
