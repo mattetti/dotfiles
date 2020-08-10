@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "windows" -}}
+alias open="explorer.exe"
+{{ if eq .chezmoi.os "darwin" -}}
+# macOS .bashrc contents
+{{ else if eq .chezmoi.os "linux" -}}
+# Linux .bashrc contents
+{{ end -}}
